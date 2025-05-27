@@ -530,12 +530,12 @@ class Comet(SpaceObject):
                     # For a simple effect, we can just change color. For true alpha, need per-pixel or separate surfaces.
                     # Here, we just use the modified color.
                     pygame.draw.circle(surface, tail_color, (int(sx_tail), int(sy_tail)), current_radius)
-    pygame.draw.line(surface, GREEN, (SCREEN_WIDTH * 0.3, SCREEN_HEIGHT * 0.1), (SCREEN_WIDTH * 0.35, SCREEN_HEIGHT * 0.2), COCKPIT_LINE_THICKNESS)
-    pygame.draw.line(surface, GREEN, (SCREEN_WIDTH * 0.7, SCREEN_HEIGHT * 0.1), (SCREEN_WIDTH * 0.65, SCREEN_HEIGHT * 0.2), COCKPIT_LINE_THICKNESS)
-    center_x, center_y = SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2
-    reticle_size = 10
-    pygame.draw.line(surface, GREEN, (center_x - reticle_size, center_y), (center_x + reticle_size, center_y), 1)
-    pygame.draw.line(surface, GREEN, (center_x, center_y - reticle_size), (center_x, center_y + reticle_size), 1)
+                    pygame.draw.line(surface, GREEN, (SCREEN_WIDTH * 0.3, SCREEN_HEIGHT * 0.1), (SCREEN_WIDTH * 0.35, SCREEN_HEIGHT * 0.2), COCKPIT_LINE_THICKNESS)
+                    pygame.draw.line(surface, GREEN, (SCREEN_WIDTH * 0.7, SCREEN_HEIGHT * 0.1), (SCREEN_WIDTH * 0.65, SCREEN_HEIGHT * 0.2), COCKPIT_LINE_THICKNESS)
+                    center_x, center_y = SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2
+                    reticle_size = 10
+                    pygame.draw.line(surface, GREEN, (center_x - reticle_size, center_y), (center_x + reticle_size, center_y), 1)
+                    pygame.draw.line(surface, GREEN, (center_x, center_y - reticle_size), (center_x, center_y + reticle_size), 1)
 
 class BlackHole(SpaceObject):
     def __init__(self, x, y, z, world_radius, color, gravity_radius, gravity_strength, event_horizon_radius):
